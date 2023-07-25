@@ -35,28 +35,6 @@
 			border: 1px solid red;
 			box-shadow: 0 0 0 0.2rem rgba(250, 16, 0, 0.18);
 		}
-		.fa-solid{
-		   color: white;
-		   font-size: 20px;
-		}
-		.fas{
-		color: white;
-		}
-		
-		nav a {
-		  color:white;
-		  font-family: 'Roboto', sans-serif;
-		
-		}
-		p{
-		 font-family: 'Roboto', sans-serif;
-		 color: #CACFD2;
-		}
-	   hr {
-            background: #0B85F7;
-            height: 40px; /* Aumenta la altura para hacer la línea más gruesa */
-            border: none; /* Elimina el borde predeterminado */
-        }
 	
 		
 	</style>
@@ -65,10 +43,10 @@
      
 </head>
  <body class="sb-nav-fixed"> 
-        
-        <nav class="sb-topnav navbar navbar-expand navbar-dark" style="background: #212F3C">
+         <i class="fa-sharp fa-solid fa-circle-user"></i>
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="##">CRUD-APP</a>
+            <a class="navbar-brand ps-3" href="##">Start Bootstrap</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search sdf-->
@@ -92,54 +70,72 @@
             </ul>
         </nav>
         <div id="layoutSidenav">
-            <div id="layoutSidenav_nav" >
-                <nav class="sb-sidenav accordion sb-sidenav-dark"style="background: #212F3C" id="sidenavAccordion">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
-                         <div class="nav">
-                           
-                            <div class="sb-sidenav-menu-heading text-center">
-                            <p>Cristian Orizano</p>
-                            <p>Admin</p>
-                            </div>
-                            
-                            <hr style="height: 4px">
-                            <a class="nav-link collapsed" style="color: #D7DBDD" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                                Mantenimiento
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Mantenimiento</div>
+                            <a class="nav-link" th:href="@{/admin/lista}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Administrador
+                            </a>
+                               <div class="sb-sidenav-menu-heading">Reporte</div>
+                            <a class="nav-link" th:href="@{/admin/formconsulta}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Reporte Administrador
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Layouts
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" th:href="@{/admin/lista}">Administrador</a>
+                                    <a class="nav-link" href="##">Static Navigation</a>
                                     <a class="nav-link" href="##">Light Sidenav</a>
                                 </nav>
                             </div>
-                            
-                               <a class="nav-link collapsed"  style="color: #D7DBDD" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-file-pdf"></i></div>
-                                Reporte
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Pages
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
-                            <div class="collapse" id="collapseLayouts2" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link"th:href="@{/admin/formconsulta}">Administrador</a>
-                                    <a class="nav-link" href="##">Light Sidenav</a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Authentication
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="##">Login</a>
+                                            <a class="nav-link" href="##">Register</a>
+                                            <a class="nav-link" href="##">Forgot Password</a>
+                                        </nav>
+                                    </div>
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                        Error
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="##">401 Page</a>
+                                            <a class="nav-link" href="##">404 Page</a>
+                                            <a class="nav-link" href="##">500 Page</a>
+                                        </nav>
+                                    </div>
                                 </nav>
                             </div>
-                            
-                             <a class="nav-link collapsed"  style="color: #D7DBDD" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-file-pdf"></i></div>
-                                ventas
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            <div class="sb-sidenav-menu-heading">Addons</div>
+                            <a class="nav-link" href="##">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Charts
                             </a>
-                            <div class="collapse" id="collapseLayouts3" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link"th:href="@{/admin/formconsulta}">Administrador</a>
-                                    <a class="nav-link" href="##">Light Sidenav</a>
-                                </nav>
-                            </div>
-                            
-                          
+                            <a class="nav-link" href="##">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Tables
+                            </a>
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">

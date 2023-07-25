@@ -1,8 +1,6 @@
 package com.entrena.controller;
 
 
-
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -52,6 +50,7 @@ public class AdministradorController {
 	
 	@RequestMapping("/lista")
 	public String ListarAdmi(Model model) {
+		
 		List<Administrador> lista= seradm.listadoActivos(1);
 		model.addAttribute("listaAd",lista);
 		
@@ -66,7 +65,7 @@ public class AdministradorController {
 		model.addAttribute("admin",admi);
 		model.addAttribute("lisCiu",listaciu);
 		
-		return "Principal";
+		return "Principal2";
 	}
 	
 	//consulta para reporte

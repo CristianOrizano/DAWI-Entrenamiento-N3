@@ -8,7 +8,7 @@
     <title>Pagina listado</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    
       <!--Jquery -->
             <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <!--datatables -->
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" referrerpolicy="no-referrer" />
     
     <!--stilos plantilla -->
-          <link th:href="@{/css2/style.css}" rel="stylesheet" />
+          <link th:href="@{/css/styles.css}" rel="stylesheet" />
              
 		<!--JS para validar  -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
@@ -36,8 +36,31 @@
 			box-shadow: 0 0 0 0.2rem rgba(250, 16, 0, 0.18);
 		}
 		  body{
-				  
+				  background: #E5E7E9;
 			  }
+			  	.icon{
+		   color: white;
+		   font-size: 20px;
+		}
+		.fas{
+		color: white;
+		}
+		
+		nav a {
+		  color:white;
+		  font-family: 'Roboto', sans-serif;
+		
+		}
+		p{
+		 font-family: 'Roboto', sans-serif;
+		 color: #CACFD2;
+		}
+	   hr {
+            background: #0B85F7;
+            height: 40px; /* Aumenta la altura para hacer la línea más gruesa */
+            border: none; /* Elimina el borde predeterminado */
+        }
+	
 	
 		
 	</style>
@@ -46,131 +69,106 @@
      
 </head>
  <body class="sb-nav-fixed"> 
- 
- <div class="sidebar close">
-    <div class="logo-details">
-      <i class='bx bxl-c-plus-plus'></i>
-      <span class="logo_name">CodingLab</span>
-    </div>
-    <ul class="nav-links">
-      <li>
-        <a href="#">
-          <i class='bx bx-grid-alt' ></i>
-          <span class="link_name">Dashboard</span>
-        </a>
         
-      </li>
-      <li>
-        <div class="iocn-link">
-          <a href="#">
-            <i class='bx bx-collection' ></i>
-            <span class="link_name">Mantenimiento</span>
-          </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
-        </div>
-        <ul class="sub-menu">
-         
-          <li><a th:href="@{/admin/lista}">Administrador</a></li>
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">PHP & MySQL</a></li>
-        </ul>
-      </li>
-      <li>
-        <div class="iocn-link">
-          <a href="#">
-            <i class='bx bx-book-alt' ></i>
-            <span class="link_name">Reporte</span>
-          </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
-        </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">Posts</a></li>
-          <li><a th:href="@{/admin/formconsulta}">Administrador</a></li>
-          <li><a href="#">Login Form</a></li>
-          <li><a href="#">Card Design</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-pie-chart-alt-2' ></i>
-          <span class="link_name">Analytics</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Analytics</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-line-chart' ></i>
-          <span class="link_name">Chart</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Chart</a></li>
-        </ul>
-      </li>
-      <li>
-        <div class="iocn-link">
-          <a href="#">
-            <i class='bx bx-plug' ></i>
-            <span class="link_name">Plugins</span>
-          </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
-        </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">Plugins</a></li>
-          <li><a href="#">UI Face</a></li>
-          <li><a href="#">Pigments</a></li>
-          <li><a href="#">Box Icons</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-compass' ></i>
-          <span class="link_name">Explore</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Explore</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-history'></i>
-          <span class="link_name">History</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">History</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-cog' ></i>
-          <span class="link_name">Setting</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Setting</a></li>
-        </ul>
-      </li>
-      <li>
-    <div class="profile-details">
-      <div class="profile-content">
-        <img src="image/profile.jpg" alt="profileImg">
-      </div>
-      <div class="name-job">
-        <div class="profile_name">Prem Shahi</div>
-        <div class="job">Web Desginer</div>
-      </div>
-      <i class='bx bx-log-out' ></i>
-    </div>
-  </li>
-</ul>
-  </div>
-  <section class="home-section">
-    <div class="home-content">
-      <i class='bx bx-menu' ></i>
-      <span class="text">Drop Down Sidebar</span>
-    </div>
-    	
-					
+        <nav class="sb-topnav navbar navbar-expand navbar-dark" style="background: #212F3C">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="##">Start Bootstrap</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search sdf-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                    <nav class="sb-sidenav accordion sb-sidenav-dark"style="background: #212F3C" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                         <div class="nav">
+                           
+                            <div class="sb-sidenav-menu-heading text-center">
+                            <p>Cristian Orizano</p>
+                            <p>Admin</p>
+                            </div>
+                            
+                            <hr style="height: 4px">
+                            <a class="nav-link collapsed" style="color: #D7DBDD" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-screwdriver-wrench icon"></i></div>
+                                Mantenimiento
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" th:href="@{/admin/lista}">Administrador</a>
+                                    <a class="nav-link" href="##">Light Sidenav</a>
+                                </nav>
+                            </div>
+                            
+                               <a class="nav-link collapsed"  style="color: #D7DBDD" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-file-pdf icon"></i></div>
+                                Reporte
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts2" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link"th:href="@{/admin/formconsulta}">Administrador</a>
+                                    <a class="nav-link" href="##">Light Sidenav</a>
+                                </nav>
+                            </div>
+                            
+                             <a class="nav-link collapsed"  style="color: #D7DBDD" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-file-pdf icon"></i></div>
+                                ventas
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts3" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link"th:href="@{/admin/formconsulta}">Administrador</a>
+                                    <a class="nav-link" href="##">Light Sidenav</a>
+                                </nav>
+                            </div>
+                            
+                          
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Start Bootstrap
+                    </div>
+                </nav>
+            </div>
+
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+   
+                        <div class="row">                       
+                        <div class="card mb-4">
+                             <div class="card-header" style="background: #2271B6;">                         
+                                <h4 class="text-white"><i class="fas fa-table me-1"></i>Administrador </h4>
+                            </div>
+                            <div class="card-body">
+						
+						
+						<!-- Button modal -->
+						<button type="button" class="btn btn-primary btn-registrar" data-bs-toggle="modal" data-bs-target="#modalAdmi">
+							Registrar
+						</button> 
 			
 						
 						<!-- Modal -->
@@ -178,19 +176,19 @@
 						aria-labelledby="staticBackdropLabel" aria-hidden="true">
 							<div class="modal-dialog modal-lg modal-dialog-centered">
 								<div class="modal-content">
-									<div class="modal-header">
+									<div class="modal-header text-white" style="background: #D61748">
 										<h5 class="modal-title" id="exampleModalLabel">Mantenimiento Administrador</h5>
 										<button type="button" id="cerrarr" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 									</div>
 									<div class="modal-body">
 							
 	            	
-					<form action="/admin/registrar" id="formAdmin" th:object="${admin}" method="post">
+					<form th:action="@{/admin/registrar}" id="formAdmin" th:object="${admin}" method="post">
 						<div class="row mb-4">
 							<div class="col-sm-12 col-md-6 col-lg-4 form-group">	
 										
 							<input type="text" name="codigo" th:field="*{codigoAd}" id="codigo" hidden class="form-control" >
-							<input type="text" th:field="*{estado.estado}" id="estado" hidden  class="form-control" >
+							<input type="text" th:field="*{estado.estado}" id="estado"   hidden class="form-control" >
 							
 								<label for="formGroupExampleInput" class="form-label">Nombre</label>
 								<div class="input-group ">
@@ -274,19 +272,11 @@
 							</div>
 						</div>
 							
-    
-    
-    
-    
-    
-    
-    <div style="margin: 50px; ">
-    	<!-- Button modal -->
-						<button type="button" class="btn btn-primary btn-registrar" data-bs-toggle="modal" data-bs-target="#modalAdmi">
-							Registrar
-						</button> 
-      <table class="table table-striped table-bordered" id="myTable">
-									<thead class="table-light">
+	
+							
+							<div class="mt-3">
+								<table class="table table-striped table-bordered" id="myTable">
+									<thead class="" style="background: #5D6D7E;color: white">
 										<tr>
 											<th>Código</th>
 											<th>Nombre</th>
@@ -336,15 +326,31 @@
 										</tr>
 									</tbody>
 								</table>
-    </div>
-  
-  </section>
-        
-      
+							</div>
+		
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2022</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
 
    
          <!--stilos plantilla -->
-            <script th:src="@{/js2/script.js}"></script>
+            <script th:src="@{/js/scripts.js}"></script>
             
             
         <script>
@@ -398,6 +404,7 @@
 		$(document).ready(function(){
 			
 			$('.editar').click(function(){
+				$('#formAdmin').bootstrapValidator("resetForm", true);
 				let cod= $(this).attr('name');
 		
 		    $('.btn-reg').text("Actualizar");
@@ -519,7 +526,7 @@
     		 			}
     		 		}
                 },
-                fecha: {					   
+                fechanaci: {					   
 					validators: {
 						notEmpty: {
 							message: 'Seleccione fecha '
